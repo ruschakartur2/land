@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@mainColor:#ff3f40;
+@secondColor:#f6f2f1;
+@blackColor:#312f30;
+
+*{
+    
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+    padding:0;
+}
+html{
+    overflow-x: hidden;
+}
+//Стилизируем нашу *наклейку* сайта
+.wrapper {
+    max-width:1500px;
+    margin:0 auto;  
+}
+//Стилизируем главные экран 
+header{
+    height:auto;
+    padding-bottom:15vh;
+    background-color: @secondColor;
+}
+//Стилизируем шапку
+nav{
+    background-color: @blackColor;
+}
+//Стилизируем меню(юзаем флекс)
+.menu {
+    display:flex;
+    justify-content: center;
+
+    li{
+    list-style-type: none;
+    padding:25px 20px;
+    
+    text-transform: uppercase;
+    }
+    li:hover{
+        background-color: @mainColor;
+        
+    }
+    a{
+        color:white;
+    }
+    a:hover{
+        color:white;
+        text-decoration: none;
+    }
+} 
+//Стилизируем *банер* (юзаем бустрап грид)
+.banner {
+    .text {
+        margin-top:10vh;
+        h2{
+            font-size:4rem;
+            text-transform: uppercase;
+            font-weight: 1000;
+            font-family: 'Open-Sans',sans-serif;
+        }
+        p {
+            max-width:550px;
+            margin-top: 4vh;
+            font-family: 'Open-Sans',sans-serif;
+        }
+        button {
+            padding:10px 50px;
+            background-color: @mainColor;
+            color:white;
+            border: 1px solid @mainColor;
+            outline:none;
+            cursor: pointer;
+            border-radius: 7px;
+            margin-top:40px;
+        }
+    }
+    .video{
+        margin-top:10vh;
+        video{    
+        max-width:700px;
+        max-height:450px;
+        height:400px;
+    }
+    }
+    
+}
+//Стилизируем блок провайд (текс+сервисы)
+.provide {
+    padding-bottom:15vh;
+    .text {
+        margin-top:10vh;
+        h3 {
+        text-transform:uppercase;
+        font-family: 'Open-Sans',sans-serif;
+        font-weight: 600; 
+        
+        }
+        p{
+            max-width:600px;
+            margin-top:40px;
+            font-family: 'Open-Sans',sans-serif;
+        }
+        button{
+            margin-top:40px;
+            padding:10px 50px;
+            background-color: white;
+            border: 3px solid @mainColor;
+            color:@mainColor;
+            font-weight: 600;
+            font-family: 'Open-Sans',sans-serif;
+            outline: none;
+            cursor:pointer;
+        }
+    }
+    .services {
+        margin-top:10vh;
+        display: flex;
+        flex-wrap:wrap-reverse;
+        align-items: baseline;
+        .service{
+           width:300px;
+            padding:10px 20px;
+            h4{
+                margin-top:3vh;
+                font-family: 'Open-Sans',sans-serif;
+            }
+        }
+    }
+    hr{
+        border:1px solid @mainColor;
+        
+        opacity:0.4;
+    }
+}
+//Стилизируем блок с нашими продуктами(Текс+картинки)
+.feature {
+    .name{
+        text-align:center;
+        h2{
+            text-transform: uppercase;
+            font-family: 'Open-Sans',sans-serif;
+            font-weight: 600;
+            font-size: 3rem;
+        }
+        p{
+            max-width:600px;
+            display: block;
+            margin:0 auto;
+            margin-top:4vh;
+        }
+        hr{
+            border:2px solid @mainColor;
+            max-width:170px;
+            margin: 0 auto;
+            margin-top:4vh;
+        }
+    }
+    .products{
+       padding-bottom:10vh;
+        margin-top:6vh;
+        .classification{
+            display: flex;
+            justify-content: center;
+            span {
+                margin-left: 4vh;
+                text-transform: uppercase;
+                font-family: 'Open-Sans',sans-serif;
+                
+            }
+        }
+        .iteams{
+            text-align:center;
+            display: flex;
+             flex-wrap:wrap-reverse;
+            align-content: center;
+            justify-content: center;
+            margin-top: 4vh;
+            .item {
+                
+                max-width:300px;
+                width:300px;
+                height:200px;
+                background-color: @mainColor;
+                margin-left: 10px;
+                margin-top: 10px;
+                img {
+                    width:100%;
+                    height:100%; 
+                }
+            }
+        }
+    }
+}
